@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -124,6 +125,20 @@ public class Main {
             System.out.println(pos+". "+element);
         }
 
+//accepts string
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your number: ");
+        String value = scanner.nextLine();
+
+        //convert to int
+        int convertedValue = Integer.parseInt(value);
+
+        System.out.println("Converted value: "+ convertedValue);
+
+        //add 5 to it
+convertedValue+=5;
+        System.out.println("Added 5 to it is "+convertedValue);
     }
 }
