@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -75,5 +77,53 @@ public class Main {
             }
             System.out.println();
         }
+
+        //ARRAY LIST
+        System.out.println("============================");
+        ArrayList<Integer> nums = new ArrayList<>();
+        //adding manually
+        nums.add(7);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        nums.add(100);
+        System.out.println("The array loist after adding elements: ");
+        for (int i=0;i<nums.size();i++){
+            System.out.print(nums.get(i)+" ");
+        }
+        //replace  3rd element with 77
+        nums.set(2,77);
+        //remove the first element
+        nums.remove(0);
+
+        System.out.println("After adding and deleting elements ");
+        for(Integer element: nums){
+            System.out.print(element+" ");
+        }
+
+        //ARRAY LIST ASSIGNMENT
+        //ACCEPT STUDENT NAMES INTO AN ARRAY LIST
+        ArrayList<String> studName = new ArrayList<>();
+        studName.add("lnb");
+        studName.add("Moloro");
+        studName.add("Unknown");
+        System.out.println("After adding the names.");
+        System.out.println(studName.toString()); //DISPLAY ADDED Names
+        //display total no of students
+        System.out.print("There are "+studName.size()+" of students in the list.");
+        //replace second name
+        studName.set(1,"Einahpets");
+        //remove the last element
+        int lastIndexToremove= studName.size()-1;
+        studName.remove(lastIndexToremove);
+
+        //printinmg the updated list
+        System.out.println("The updated students list is: \n");
+        int pos=1;
+        for(String element:studName){
+            System.out.println(pos+". "+element);
+        }
+
+
     }
 }
